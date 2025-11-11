@@ -1,0 +1,5 @@
+Steps:
+    1: Entering a name into search bar
+    2: name is sent to DNS Query Resolver with a ? mark
+    3: DNS Resolver goes through Root Server to Top Level Domain Server to get .com or .net
+    4: TLD Server goes to Authorative Name Server to return an IP address to Resolver
