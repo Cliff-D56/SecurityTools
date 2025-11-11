@@ -5,6 +5,8 @@ dictionary = { #This is a Dictionary
     "Security":"CliffordOS",
     "Admin":"Clifford"
 }
+
+#Functions and Error Handling
 def returnInput():
     try:
         return input("Type in Your name: ")

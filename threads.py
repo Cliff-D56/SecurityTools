@@ -18,10 +18,12 @@ def task(name):
     print(f"Task {name} starting")
     sleep_time = random.randint(1,5)
     time.sleep(sleep_time)
-    print(f"Task {name} completed after {sleep_time}seconds")
+    print(f"Task {name} completed after {sleep_time}s")
     return sleep_time
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+#Creates 3 threads that take one task each
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor: 
+    #Creates however many tasks specified in range()
     future_to_task = {executor.submit(task, i): i for i in range(5)}
     for future in concurrent.futures.as_completed(future_to_task):
         task_name = future_to_task[future]
