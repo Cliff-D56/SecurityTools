@@ -1,7 +1,7 @@
 import dns.resolver
 
 #Must be a name
-target_domain = 'google.com'
+target_domain = 'udemy.com'
 
 #Type of records from DNS
 records_type = ['A','AAAA','CNAME','MX','TXT','SOA']

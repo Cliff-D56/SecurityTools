@@ -2,7 +2,7 @@ import requests
 import threading
 from tqdm import tqdm
 
-domain = 'google.com'
+domain = 'udemy.com'
 
 with open('subdomains.txt') as file:
     subdomains = file.read().splitlines()
