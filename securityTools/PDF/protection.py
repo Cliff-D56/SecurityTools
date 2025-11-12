@@ -14,7 +14,7 @@ def create_password_protect_pdf(input_pdf, output_pdf, password):
 
             pdf_writer.encrypt(password)
 
-            with open(output_pdf, 'w') as outputFile:
+            with open(output_pdf, 'wb') as outputFile:
                 pdf_writer.write(output_pdf)
             print(f"Password protected PDF saved as {output_pdf}")
     except Exception as e:
@@ -25,7 +25,7 @@ def create_password_protect_pdf(input_pdf, output_pdf, password):
 def main():
     if(len(sys.argv) != 4):
         print("Usage: python3 script.py <input_pdf> <output_pdf> <password>")
-        sys.exit()
+        sys.exit(1)
 
     input_pdf = sys.argv[1]
     output_pdf = sys.argv[2]
